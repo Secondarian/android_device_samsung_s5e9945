@@ -1,4 +1,12 @@
 <compatibility-matrix version="1.0" type="framework">
+    <hal format="hidl">
+        <name>android.system.wifi.keystore</name>
+        <version>1.0</version>
+        <interface>
+            <name>IKeystore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="aidl">
         <name>vendor.samsung.hardware.keymint</name>
         <version>3</version>
