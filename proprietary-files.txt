@@ -187,6 +187,17 @@ vendor/lib64/libexynosdisplay.so
 vendor/lib64/libexynosgraphicbuffer.so
 vendor/lib64/libexynosgraphicbuffer_core.so
 
+# Fingerprint
+vendor/etc/init/init.fingerprint.rc
+vendor/etc/init/vendor.samsung.hardware.sysinput-default.rc
+vendor/lib64/libsfp_sensor.so
+vendor/lib64/libsfp_teegw.so
+vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint-V1-ndk.so
+vendor/lib64/libsynaFpSensorTestNwd.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libqfp_sensortest.so
+
 # Firmware
 vendor/firmware/00_generic_xtalk_shape.bin
 vendor/firmware/APBargeIn_AUDIO_SLSI.bin
@@ -340,6 +351,20 @@ vendor/lib64/libvkmanager_vendor.so
 vendor/bin/hw/android.hardware.gatekeeper-service
 vendor/etc/init/android.hardware.gatekeeper-service.rc
 vendor/lib64/hw/gatekeeper.s5e9945.so
+
+# Security - Hermes
+vendor/bin/hermesd
+vendor/etc/init/hermesd.rc
+vendor/etc/vintf/manifest/iweaver_aidl_v2_manifest.xml
+vendor/lib64/libshctrl.so
+vendor/lib64/libhwvault.so
+vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
+vendor/lib64/vendor.samsung.hardware.security.drk-V1-ndk.so
+vendor/lib64/libhermes_bdbridge.so
+vendor/etc/secnvm/k250a_47000400_0.img
+vendor/etc/secnvm/k250a_47000403_1.img
+vendor/etc/secnvm/k250a_47000406_f.img
 
 # Security - Keymint
 vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
