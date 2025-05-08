@@ -341,6 +341,7 @@ vendor/lib64/nfc_nci_sec.so
 vendor/lib64/vendor.samsung.hardware.nfc_aidl-V1-ndk.so
 
 # RIL
+system/etc/apns-conf.xml
 vendor/bin/cbd
 vendor/bin/dmd
 vendor/bin/hw/rild
