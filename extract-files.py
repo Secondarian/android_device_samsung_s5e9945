@@ -18,7 +18,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/samsung/e1s',
+    'device/samsung/s5e9945',
     'hardware/samsung',
 ]
 
@@ -51,8 +51,6 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute_samsung.so')
         .replace_needed('libtinyalsa.so', 'libtinyalsa_samsung.so'),
-    'vendor/lib64/hw/camera.s5e9945.so': blob_fixup()
-        .add_needed('libui_shim.so'),
     'vendor/lib64/hw/vulkan.samsung.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_acquire')
         .clear_symbol_version('AHardwareBuffer_allocate')
@@ -101,7 +99,7 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 module = ExtractUtilsModule(
-    'e1s',
+    's5e9945',
     'samsung',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
