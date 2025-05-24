@@ -1,3 +1,33 @@
 on boot
     # Use game mode for high sampling rate
     write /sys/class/sec/tsp/cmd set_game_mode,1
+
+# enabled permission
+on property:sys.boot_completed=1
+    chown system system /dev/tspio
+    chown system system /sys/class/sec/tsp/input/enabled
+    chown system system /sys/class/sec/tsp1/input/enabled
+    chown system system /sys/class/sec/tsp2/input/enabled
+    chown system system /sys/class/sec/sec_epen/input/enabled
+    chown system system /sys/class/sec/tsp/enabled
+    chown system system /sys/class/sec/tsp1/enabled
+    chown system system /sys/class/sec/tsp2/enabled
+    chown system radio /sys/class/sec/tsp/cmd
+    chown system radio /sys/class/sec/tsp1/cmd
+    chown system radio /sys/class/sec/tsp2/cmd
+    chown system system /sys/class/sec/sec_epen/enabled
+    chown system radio /sys/class/sec/sec_epen/cmd
+    chown system system /sys/class/sec/sec_keypad/enabled
+    chown system system /sys/class/sec/sec_keypad/sec_pogo_keyboard_fw
+    chown system system /sys/class/sec/sec_keypad/block_pogo_keyboard
+    chown system system /sys/class/sec/tsp/input/trusted_touch_enable
+    chown system system /sys/class/sec/tsp/input/trusted_touch_event
+    chown system system /sys/class/sec/tsp/input/trusted_touch_type
+    chown system system /sys/class/sec/tsp1/input/trusted_touch_enable
+    chown system system /sys/class/sec/tsp1/input/trusted_touch_event
+    chown system system /sys/class/sec/tsp1/input/trusted_touch_type
+    chown system system /sys/class/sec/tsp2/input/trusted_touch_enable
+    chown system system /sys/class/sec/tsp2/input/trusted_touch_event
+    chown system system /sys/class/sec/tsp2/input/trusted_touch_type
+    chown system system /sys/class/sec/digital_hall/digital_hall_thd
+    chmod 0664 /sys/class/sec/digital_hall/digital_hall_thd
